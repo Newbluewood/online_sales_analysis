@@ -13,5 +13,12 @@ class ProductManager:
         return print(f"\n - { [product.name for product in self.avaliable_product_list] } ")
     
     def total_of_products(self):
-        total = sum(product._quantity * product.price for product in self.avaliable_product_list)
+        total = sum(product._quantity * product._price for product in self.avaliable_product_list)
         return print(f" Total for all products in list : {total} $ ")
+    
+    # new function remove product fro list
+    def remove_product_from_list(self, name):
+        forremove = [product for product in self.avaliable_product_list if product.name == name]
+        self.avaliable_product_list.remove(forremove[0])
+        
+    
