@@ -1,0 +1,4 @@
+# all .png ignore
+*.png
+# config.json ignore
+config.json
